@@ -37,7 +37,7 @@ public class Codec {
          return null;
 
         String[] val = data.split(",");
-        TreeNode root = new TreeNode(Integer.parseInt(val[0]));
+        TreeNode root = new TreeNode(Integer.valueOf(val[0]));
 
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
@@ -48,14 +48,14 @@ public class Codec {
             TreeNode curr = q.poll();
 
             if(!val[i].equals("null")){
-                TreeNode left = new TreeNode(Integer.parseInt(val[i]));
+                TreeNode left = new TreeNode(Integer.valueOf(val[i]));
                 curr.left = left;
                 q.add(left);
             }
             i++;
 
             if(!val[i].equals("null")){
-                TreeNode right = new TreeNode(Integer.parseInt(val[i]));
+                TreeNode right = new TreeNode(Integer.valueOf(val[i]));
                 curr.right = right;
                 q.add(right);
             }
