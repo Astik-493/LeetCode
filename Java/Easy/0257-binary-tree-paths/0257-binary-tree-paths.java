@@ -19,8 +19,7 @@ class Solution {
         return;
 
         int len = sb.length();
-        if(len>0)
-        sb.append("->");
+
 
         sb.append(root.val);
 
@@ -28,6 +27,7 @@ class Solution {
             ans.add(sb.toString());
 
             else{
+                sb.append("->");
                 dfs(root.left,sb,ans);
                 dfs(root.right,sb,ans);
             }
