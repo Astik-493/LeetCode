@@ -2,10 +2,9 @@ class Solution {
     public int strStr(String haystack, String needle) {
         int n = haystack.length();
         for(int i=0;i<n;i++){
-            if(haystack.startsWith(needle))
+            if(haystack.startsWith(needle,i))
             return i;
-            else
-           haystack =  haystack.substring(1,haystack.length());
+            
         }
         return -1;
     }
