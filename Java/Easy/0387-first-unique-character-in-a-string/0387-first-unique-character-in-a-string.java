@@ -9,7 +9,6 @@ class Solution {
             if (freq[s.charAt(i) - 'a'] == 1) 
                 return i;        
         }
-
         return -1;
     }
 }
