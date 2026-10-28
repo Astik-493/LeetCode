@@ -40,10 +40,7 @@ class Solution {
 
         ArrayList<Integer> list = new ArrayList<>();
         inorder(root,list);
-
-        int st =0;
-        int end = list.size()-1;
-        root = BST(list,st,end);
+        root = BST(list,0,list.size()-1);
 
         return root;
     }
