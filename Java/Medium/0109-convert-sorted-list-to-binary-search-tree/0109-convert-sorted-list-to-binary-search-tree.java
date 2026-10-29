@@ -28,29 +28,26 @@ class Solution {
         if(head==null)
         return null; 
 
-        ListNode slow = head;
-        ListNode fast = head;
+         if (head.next == null)
+            return new TreeNode(head.val);
 
+         ListNode slow = head;
+        ListNode fast = head;
         ListNode prev = null;
-        while(fast!=null && fast.next!=null){
+        
+        while (fast != null && fast.next != null) {
             prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
-        ListNode mid = slow;
-        TreeNode root = new TreeNode(mid.val);
-        ListNode left = head;
-        ListNode right = mid.next;
-
-        if (prev != null)
-            prev.next = null;
-
-          mid.next = null;
-
-        root.left = sortedListToBST(left == mid ? null : left);
-        root.right = sortedListToBST(right);
-
-        return root;     
+        
+        prev.next = null;
+        
+        TreeNode root = new TreeNode(slow.val);
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(slow.next);
+        
+        return root;
     }
 }
 
