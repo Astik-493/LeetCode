@@ -39,8 +39,7 @@ class Solution {
             prev = slow;
             slow = slow.next;
             fast = fast.next.next;
-        }
-        
+        } 
         prev.next = null;
         
         TreeNode root = new TreeNode(slow.val);
