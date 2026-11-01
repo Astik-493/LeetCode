@@ -6,6 +6,7 @@ class KthLargest {
         for(int x:nums)
         add(x);
     }
+    
     public int add(int val) {
         pq.add(val);
         if(pq.size()>num)
