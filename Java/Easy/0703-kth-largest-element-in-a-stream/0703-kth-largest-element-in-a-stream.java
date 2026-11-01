@@ -3,11 +3,8 @@ class KthLargest {
     int num;
     public KthLargest(int k, int[] nums) {
         num = k;
-        for(int x:nums){
-            pq.add(x);
-            if(pq.size()>k)
-                pq.remove();
-        }
+        for(int x:nums)
+        add(x);
     }
     public int add(int val) {
         pq.add(val);
