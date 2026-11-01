@@ -27,18 +27,12 @@ class Solution {
             if (row == n - 1 && col == m - 1)
                 return val;
 
-            // if (val > dist[row][col])
-            //     continue;
-
             for (int i = 0; i < 4; i++) {
                 int ur = row + r[i];
                 int uc = col + c[i];
 
                 if (ur >= 0 && ur < n && uc >= 0 && uc < m) {
-                    int diff = Math.abs(
-                        heights[ur][uc] - heights[row][col]
-                    );
-
+                    int diff = Math.abs(heights[ur][uc] - heights[row][col]);
                     int max = Math.max(val, diff);
 
                     if (dist[ur][uc] > max) {
@@ -48,7 +42,6 @@ class Solution {
                 }
             }
         }
-
         return 0;
     }
 }
