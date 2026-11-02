@@ -8,8 +8,7 @@ class Solution {
         for (int i = 0; i < n; i++)
             Arrays.fill(dist[i], Integer.MAX_VALUE);
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>(
-            (a, b) -> Integer.compare(a[0], b[0]));
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Integer.compare(a[0], b[0]));
 
         pq.add(new int[]{0, 0, 0});
         dist[0][0] = 0;
