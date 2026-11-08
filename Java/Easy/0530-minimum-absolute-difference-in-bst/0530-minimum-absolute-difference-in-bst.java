@@ -22,7 +22,7 @@ class Solution {
             return;
 
         inorder(root.left);
-        if(prev!=-1)
+        if(prev!= -1)
             min = Math.min(min,root.val - prev);
 
         prev = root.val;
@@ -30,8 +30,8 @@ class Solution {
     }
 
     public int getMinimumDifference(TreeNode root) {
-         prev = -1;
-        min = Integer.MAX_VALUE;
+        //  prev = -1;
+        // min = Integer.MAX_VALUE;
 
         inorder(root);
         return min;
