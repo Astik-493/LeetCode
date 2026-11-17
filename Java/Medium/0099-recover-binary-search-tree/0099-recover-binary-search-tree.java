@@ -17,7 +17,7 @@ class Solution {
     TreeNode prev;
     TreeNode first;
     TreeNode last;
-    
+
     public void inorder(TreeNode root){
         if(root==null)
         return;
@@ -25,14 +25,11 @@ class Solution {
         inorder(root.left);
 
         if(prev!=null && prev.val>root.val){
-            if(first==null){
+            if(first==null)
                 first = prev;
-                last = root;
-            }
-            else 
+    
                 last = root;
         }
-
         prev = root;
         inorder(root.right);
     }
@@ -45,7 +42,6 @@ class Solution {
             int temp = first.val;
             first.val = last.val;
             last.val = temp;
-        }
-        
+        } 
     }
 }
