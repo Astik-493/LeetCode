@@ -16,8 +16,8 @@
 class Solution {
     TreeNode prev;
     TreeNode first;
-    // TreeNode mid;
     TreeNode last;
+    
     public void inorder(TreeNode root){
         if(root==null)
         return;
@@ -46,10 +46,6 @@ class Solution {
             first.val = last.val;
             last.val = temp;
         }
-        // else if(first!=null && mid!=null){
-        //         int temp = first.val;
-        //         first.val = mid.val;
-        //         mid.val = temp;
-        // }
+        
     }
 }
