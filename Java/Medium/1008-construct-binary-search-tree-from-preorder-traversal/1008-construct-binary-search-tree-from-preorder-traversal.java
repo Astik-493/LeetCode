@@ -26,6 +26,7 @@ class Solution {
         return root;
     }
     public TreeNode bstFromPreorder(int[] preorder) {
+        i =0;
         return bst(preorder,Integer.MAX_VALUE);
     }
 }
