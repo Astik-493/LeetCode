@@ -1,4 +1,5 @@
 class Solution {
+    // heap sort
     public void heapify(int [] nums,int i,int n){
         int left = 2*i+1;
         int right = 2*i+2;
@@ -31,6 +32,8 @@ class Solution {
         }
         return nums;   
     }
+
+    // merge sort
     // public int[] sortArray(int[] nums) {
     //   if ( nums.length <= 1) {
     //         return nums;
