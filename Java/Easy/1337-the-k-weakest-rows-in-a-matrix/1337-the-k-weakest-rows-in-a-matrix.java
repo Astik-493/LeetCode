@@ -5,16 +5,16 @@ class Solution {
 
         for(int i=0;i<mat.length;i++){
             int count = 0;
-            for(int j=0;j<mat[0].length;j++){
+            for(int j=0;j<mat[0].length;j++)
                 count+=mat[i][j];
-            }
+    
             pq.add(new int []{count,i});
         }
         int ans [] = new int[k];
-        for(int i=0;i<k;i++){
+
+        for(int i=0;i<k;i++)
             ans[i] = pq.remove()[1];
 
-        }
         return ans;
     }
 
