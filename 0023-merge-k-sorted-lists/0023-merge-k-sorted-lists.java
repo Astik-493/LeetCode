@@ -26,13 +26,12 @@ class Solution {
         while(!pq.isEmpty()){
             ListNode curr = pq.poll();
             temp.next = curr;
+            temp = temp.next;
 
             if(curr.next!=null)
                 pq.add(curr.next);
-            
-            temp = temp.next;
         }
         return ans.next;
-        
+
     }
 }
